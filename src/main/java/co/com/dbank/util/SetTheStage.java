@@ -1,4 +1,4 @@
-package co.com.proyectobase.conf;
+package co.com.dbank.util;
 
 import io.cucumber.java.Before;
 import net.serenitybdd.screenplay.actors.OnStage;

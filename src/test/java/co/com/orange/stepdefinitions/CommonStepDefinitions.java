@@ -1,6 +1,6 @@
-package co.com.dbank.stepdefinitions;
+package co.com.orange.stepdefinitions;
 
-import co.com.dbank.tasks.Abrir;
+import co.com.orange.tasks.Abrir;
 import io.cucumber.java.en.Given;
 import net.serenitybdd.screenplay.actors.OnStage;
 

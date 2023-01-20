@@ -1,4 +1,4 @@
-package co.com.dbank.runners;
+package co.com.orange.runners;
 
 import io.cucumber.junit.CucumberOptions.SnippetType;
 import io.cucumber.junit.CucumberOptions;
@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         tags = "@Regression",
         features = "src/test/resources/features/login.feature",
-        glue = {"co.com.dbank.stepdefinitions", "co.com.dbank.util"},
+        glue = {"co.com.orange.stepdefinitions", "co.com.orange.util"},
         snippets = SnippetType.CAMELCASE
 )
 

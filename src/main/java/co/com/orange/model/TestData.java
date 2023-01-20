@@ -1,4 +1,4 @@
-package co.com.dbank.model;
+package co.com.orange.model;
 
 
 import java.util.HashMap;

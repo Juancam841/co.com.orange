@@ -1,13 +1,13 @@
-package co.com.dbank.interactions;
+package co.com.orange.interactions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
-import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 
-import static co.com.dbank.userinterface.RegistroUi.*;
+import static co.com.orange.userinterface.RegistroUi.*;
+import static co.com.orange.userinterface.DashboardUi.*;
 
 public class Ingresar implements Interaction {
     private final String user;
@@ -26,8 +26,9 @@ public class Ingresar implements Interaction {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Enter.theValue(user).into(USER_INPUT),
-                Enter.theValue(pass).into(PASSLOGIN_INPUT),
-                Click.on(SUBMIT_BUTTON)
+                Enter.theValue(pass).into(PASS_INPUT),
+                Click.on(LOGIN_BUTTON),
+                Click.on(MYIFO_BUTTON)
         );
     }
 }

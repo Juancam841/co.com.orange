@@ -1,6 +1,6 @@
-package co.com.dbank.tasks;
+package co.com.orange.tasks;
 
-import co.com.dbank.model.TestData;
+import co.com.orange.model.TestData;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;

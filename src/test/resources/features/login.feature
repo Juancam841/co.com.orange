@@ -2,15 +2,15 @@
 Feature: Orange
   Yo como usuario, quiero ingresar a la plataforma Orange para administrar
 
-  @Scenario1
+  @login
   Scenario Outline: Ingreso usuario
     Given Quiero ejecutar transacciones en la plataforma
     When Utilizo mis datos de acceso <user> <pass>
     Then Accedo a mi cuenta <id> <id1>
 
     Examples:
-      | user  | pass     | id   | id1      |
-      | Admin | admin123 | Paul | Collings |
+      | user  | pass     | id  | id1    |
+      | Admin | admin123 | Upex | Galaxy |
   #Crear escenario no feliz donde el SS ya esté registrado
   #Crear escenario no feliz donde no se cumpla con la estructura del Business Need:
   #Crear escenario no feliz donde no se cumpla con la estructura de la contraseña

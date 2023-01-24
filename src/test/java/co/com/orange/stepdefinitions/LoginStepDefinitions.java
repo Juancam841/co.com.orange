@@ -2,7 +2,7 @@ package co.com.orange.stepdefinitions;
 
 import co.com.orange.questions.Pregunta;
 import co.com.orange.tasks.Loguearse;
-import co.com.orange.util.WaitPage;
+
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.GivenWhenThen;
@@ -19,7 +19,7 @@ public class LoginStepDefinitions {
 
     @Then("Accedo a mi cuenta {word} {word}")
     public void accedo_a_mi_cuenta(String id, String id1) {
-        WaitPage.tiempoSegundos(4);
+
         String nuevoid = id + " " + id1;
         OnStage.theActorInTheSpotlight().should(
                 GivenWhenThen.seeThat(Pregunta.hacia(nuevoid))

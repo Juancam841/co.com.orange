@@ -1,20 +1,17 @@
 package co.com.orange.runners;
 
-import io.cucumber.junit.CucumberOptions.SnippetType;
 import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
 
-
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        tags = "@login",
-        features = "src/test/resources/features/login.feature",
+
+        features = {"src/test/resources/features/pim.feature"},
         glue = {"co.com.orange.stepdefinitions", "co.com.orange.util"},
-        snippets = SnippetType.CAMELCASE
+        snippets = CucumberOptions.SnippetType.CAMELCASE,
+        tags = "@listar"
 )
 
-public class LoginRunner {
-
+public class PimRunner {
 }
-

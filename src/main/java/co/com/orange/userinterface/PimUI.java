@@ -12,4 +12,14 @@ public class PimUI extends PageObject {
             locatedBy("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]");
     public static final Target ID_TXT = Target.the("Campo de texto sonde se encuentra el id del empleado buscado").
             locatedBy("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div/div/div[2]/div");
+    public static final Target FIRST_TXT = Target.the("Caja de texto para ingresar el nombre").
+            locatedBy("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[1]/div/div/div[2]/div[1]/div[2]/input");
+    public static final Target LAST_TXT = Target.the("Caja de texto para ingresar el apellido").
+            locatedBy("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[1]/div/div/div[2]/div[3]/div[2]/input");
+    public static final Target IDCREAR_TXT = Target.the("Caja de texto para ingresar el id del empleado").
+            locatedBy("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[1]/div[2]/div/div/div[2]/input");
+    public static final Target SAVE_BUTTON = Target.the("Boton para enviar formulario de empleado creado").
+            locatedBy("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[2]/button[2]");
+    public static final Target ADDEMPLOYEE_BUTTON = Target.the("Boton de acceso a AddEmployee").
+            locatedBy("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[3]/a");
 }

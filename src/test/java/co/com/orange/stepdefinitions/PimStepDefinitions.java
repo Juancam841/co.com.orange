@@ -2,6 +2,7 @@ package co.com.orange.stepdefinitions;
 
 import co.com.orange.questions.ValidaId;
 import co.com.orange.tasks.Abrir;
+import co.com.orange.tasks.AddEmploye;
 import co.com.orange.tasks.EmployeeList;
 import co.com.orange.tasks.Pim;
 import io.cucumber.java.en.Given;
@@ -24,6 +25,20 @@ public class PimStepDefinitions {
     }
     @Then("Se muestran los resultados {word}")
     public void se_muestran_los_resultados(String id) {
-        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(ValidaId.consulta(id)));
+        OnStage.theActorInTheSpotlight().
+                should(GivenWhenThen.seeThat(ValidaId.consulta(id)));
+    }
+
+    @When("Creo un empleado {word} {word} {word}")
+    public void creo_un_empleado(String first, String last, String id) {
+        OnStage.theActorCalled("User").
+                attemptsTo(Pim.Ingresar());
+        OnStage.theActorInTheSpotlight().
+                attemptsTo(AddEmploye.crear(first, last, id));
+    }
+
+    @Then("Se muestra el empleado")
+    public void se_muestra_el_empleado() {
+
     }
 }

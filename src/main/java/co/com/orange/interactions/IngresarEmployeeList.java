@@ -3,10 +3,12 @@ package co.com.orange.interactions;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
+import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actors.OnStage;
 
 import static co.com.orange.userinterface.PimUI.EMPLOYEEID_TXT;
+import static co.com.orange.userinterface.PimUI.SEARCH_BUTTON;
 
 public class IngresarEmployeeList implements Interaction {
     public IngresarEmployeeList(String employee) {
@@ -24,7 +26,8 @@ public class IngresarEmployeeList implements Interaction {
     public <T extends Actor> void performAs(T actor) {
         OnStage.theActorInTheSpotlight()
                 .attemptsTo(
-                        Enter.theValue(employee).into(EMPLOYEEID_TXT)
+                        Enter.theValue(employee).into(EMPLOYEEID_TXT),
+                        Click.on(SEARCH_BUTTON)
                 );
     }
 }

@@ -1,6 +1,6 @@
 defaultTasks 'clean', 'test', 'aggregate'
 
-group 'co.com.dbank'
+group 'co.com.orange'
 version '1.0-SNAPSHOT'
 repositories {
     mavenCentral()

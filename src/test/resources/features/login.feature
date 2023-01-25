@@ -9,8 +9,8 @@ Feature: Orange
     Then Accedo a mi cuenta <id> <id1>
 
     Examples:
-      | user  | pass     | id  | id1    |
-      | Admin | admin123 | Upex | Galaxy |
+      | user  | pass     | id   | id1   |
+      | Admin | admin123 | Paul | Allen |
   #Crear escenario no feliz donde el SS ya esté registrado
   #Crear escenario no feliz donde no se cumpla con la estructura del Business Need:
   #Crear escenario no feliz donde no se cumpla con la estructura de la contraseña

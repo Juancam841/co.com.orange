@@ -11,6 +11,7 @@ public class CommonStepDefinitions {
     public void quiero_ejecutar_transacciones_en_la_plataforma() {
         OnStage.theActorCalled("User").attemptsTo(
                 Abrir.explorador()
+
         );
     }
 }

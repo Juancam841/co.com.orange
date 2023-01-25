@@ -1,4 +1,4 @@
-@PIM
+@Pim @Regression
 Feature: PIM
 
   @listar
@@ -6,7 +6,7 @@ Feature: PIM
     Given Quiero ejecutar transacciones en la plataforma
     And Utilizo mis datos de acceso <user> <pass>
     When Consulto parametros <employee>
-    Then Se muestran los resultados
+    Then Se muestran los resultados <employee>
 
     Examples:
       | user  | pass     | employee |

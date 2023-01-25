@@ -7,11 +7,11 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
 
-        features = {"src/test/resources/features/pim.feature"},
+        features = {"src/test/resources/features/pim.feature","src/test/resources/features/login.feature"},
         glue = {"co.com.orange.stepdefinitions", "co.com.orange.util"},
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        tags = "@Pim"
+        tags = "@Regression"
 )
 
-public class PimRunner {
+public class RegressionRunner {
 }

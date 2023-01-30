@@ -2,7 +2,7 @@
 Feature: Orange
   Yo como usuario, quiero ingresar a la plataforma Orange para administrar
 
-  @login
+  @login @Regression
   Scenario Outline: Ingreso usuario
     Given Quiero ejecutar transacciones en la plataforma
     When Utilizo mis datos de acceso <user> <pass>
@@ -10,7 +10,7 @@ Feature: Orange
 
     Examples:
       | user  | pass     | id   | id1   |
-      | Admin | admin123 | Paul | Allen |
+      | Admin | admin123 | Paul | Collings |
   #Crear escenario no feliz donde el SS ya esté registrado
   #Crear escenario no feliz donde no se cumpla con la estructura del Business Need:
   #Crear escenario no feliz donde no se cumpla con la estructura de la contraseña

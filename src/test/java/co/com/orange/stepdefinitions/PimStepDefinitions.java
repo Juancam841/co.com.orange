@@ -1,16 +1,12 @@
 package co.com.orange.stepdefinitions;
 
+import co.com.orange.questions.AddEmployeQuestion;
 import co.com.orange.questions.ValidaId;
-import co.com.orange.tasks.Abrir;
-import co.com.orange.tasks.AddEmploye;
-import co.com.orange.tasks.EmployeeList;
-import co.com.orange.tasks.Pim;
-import io.cucumber.java.en.Given;
+import co.com.orange.tasks.*;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actors.OnStage;
-import org.openqa.selenium.WebDriver;
 
 public class PimStepDefinitions {
 
@@ -37,8 +33,22 @@ public class PimStepDefinitions {
                 attemptsTo(AddEmploye.crear(first, last, id));
     }
 
-    @Then("Se muestra el empleado")
-    public void se_muestra_el_empleado() {
+    @Then("Se muestra el empleado {word} {word}")
+    public void se_muestra_el_empleado(String first, String last) {
+        String name = first+" "+last;
+        OnStage.theActorInTheSpotlight().
+                should(GivenWhenThen.seeThat(AddEmployeQuestion.consultar(name)));
+    }
+
+
+    @When("Elimino un empleado {word}")
+    public void elimino_un_empleado(String id) {
+        OnStage.theActorInTheSpotlight().
+                attemptsTo(DeleteEmployeeTask.ejecutar(id));
+    }
+
+    @Then("Se muestra el mensaje")
+    public void se_muestra_el_mensaje() {
 
     }
 }
